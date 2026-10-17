@@ -17,6 +17,7 @@ I honestly like it for 2 reasons:
 2. It simplifies inter-service calls when your project gets big. So when let's say you need to process an order, you don't have to manually call each service that comes after placing an order like sending an email, updating the inventory, processing the transaction.. that is too much work. instead,  you just send an "event" to a kafka message broker and every concerned service will  do their thing automatically when they see the new order-placed event.
 
 ## Main protagonists
+![Kafka Pipeline Architecture](assets/architecture.png)
 
 **Kafka message broker** the running Kafka container which contains every topic and handles the traffic.
 **Kafka topic** a folder or group within the message broker to organise the messages. each domain has it own topic. for example email-notifications is a topic.
